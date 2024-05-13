@@ -2,7 +2,7 @@
     "name": "verbb/image-resizer",
     "description": "Resize assets when they are uploaded.",
     "type": "craft-plugin",
-    "version": "4.0.0-beta.1",
+    "version": "4.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -26,9 +26,9 @@
     ],
     "require": {
         "php": "^8.2",
-        "craftcms/cms": "^5.0.0-beta.1",
+        "craftcms/cms": "^5.0.0",
         "lsolesen/pel": "^0.9.6",
-        "verbb/base": "^3.0.0-beta.1"
+        "verbb/base": "^3.0.0"
     },
     "autoload": {
         "psr-4": {
