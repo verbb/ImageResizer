@@ -47,7 +47,7 @@ class ImageResizer extends Plugin
             $this->_registerCpRoutes();
         }
         
-        if (Craft::$app->getEdition() === Craft::Pro) {
+        if (Craft::$app->getEdition() !== Craft::Solo) {
             $this->_registerPermissions();
         }
     }
