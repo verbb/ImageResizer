@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'All Asset Source Settings' => 'All Asset Source Settings',
+  'All Asset Volume Settings' => 'All Asset Volume Settings',
   'Bulk Resize' => 'Bulk Resize',
   'Cancel' => 'Cancel',
   'Caution' => 'Caution',
@@ -21,6 +21,7 @@ return [
   'Image Resizer will save a copy of your original image, untouched. This will be in a folder called `originals`, relative to the source image.' => 'Image Resizer will save a copy of your original image, untouched. This will be in a folder called `originals`, relative to the source image.',
   'Image Width' => 'Image Width',
   'Logs' => 'Logs',
+  'Manage Resize for All Volumes' => 'Manage Resize for All Volumes',
   'Non-destructive' => 'Non-destructive',
   'Quality' => 'Quality',
   'Resize' => 'Resize',
@@ -47,7 +48,8 @@ return [
   'Volume not enabled to auto-resize on upload.' => 'Volume not enabled to auto-resize on upload.',
   'Volume not found.' => 'Volume not found.',
   'Whether uploaded images should be automatically resized. This does not effect batch processing.' => 'Whether uploaded images should be automatically resized. This does not effect batch processing.',
+  'Whether you want to manage image resize settings for all asset volumes, or manage them individually for each volume.' => 'Whether you want to manage image resize settings for all asset volumes, or manage them individually for each volume.',
   'width' => 'width',
   'You are about to resize {desc} to be a maximum of {width}px wide and {height}px high. Alternatively, set the width and height limits below for on-demand resizing.' => 'You are about to resize {desc} to be a maximum of {width}px wide and {height}px high. Alternatively, set the width and height limits below for on-demand resizing.',
-  '{label} Asset Source Settings' => '{label} Asset Source Settings',
+  '“{label}” Asset Volume Settings' => '“{label}” Asset Volume Settings',
 ];
