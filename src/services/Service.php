@@ -68,10 +68,10 @@ class Service extends Component
             return null;
         }
 
-        // Check if there's a specific setting for the source - no matter what it is, it takes precendence
+        // Check if there's a specific setting for the source - so long as not empty, it takes precendence
         $sourceSettings = $settings->assetSourceSettings[$sourceId] ?? [];
 
-        if (array_key_exists($setting, $sourceSettings)) {
+        if (array_key_exists($setting, $sourceSettings) && $sourceSettings[$setting] !== '') {
             return $sourceSettings[$setting];
         }
 
