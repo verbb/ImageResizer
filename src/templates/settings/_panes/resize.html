@@ -5,9 +5,16 @@
     sourceOptions: sourceOptions,
 } %}
 
-<h2>{{ "All Asset Source Settings" | t('image-resizer') }}</h2>
-
-{{ macros.resizeSetting(settings, additionalSettings) }}
+{{ forms.lightswitchField({
+    label: 'Manage Resize for All Volumes' | t('image-resizer'),
+    instructions: 'Whether you want to manage image resize settings for all asset volumes, or manage them individually for each volume.' | t('image-resizer'),
+    id: 'useGlobalSettings',
+    name: 'useGlobalSettings',
+    on: settings.useGlobalSettings,
+    warning: macros.configWarning('useGlobalSettings', 'image-resizer'),
+    toggle: 'all-volume-settings',
+    reverseToggle: 'volume-settings'
+}) }}
 
 {{ forms.lightswitchField({
     label: 'Skip larger resulting images' | t('image-resizer'),
@@ -27,12 +34,20 @@
     warning: macros.configWarning('nonDestructiveResize', 'image-resizer'),
 }) }}
 
-<div id="assetSources">
-    {% for item in sourceOptions %}
-        <hr>
+<hr>
 
-        <h2>{{ "{label} Asset Source Settings" | t('image-resizer', { label: item.label }) }}</h2>
+<div id="all-volume-settings">
+    <h2>{{ 'All Asset Volume Settings' | t('image-resizer') }}</h2>
+
+    {{ macros.resizeSetting(settings, additionalSettings) }}
+</div>
+
+<div id="volume-settings">
+    {% for item in sourceOptions %}
+        <h2>{{ "“{label}” Asset Volume Settings" | t('image-resizer', { label: item.label }) }}</h2>
 
         {{ macros.resizeSetting(settings, additionalSettings, item) }}
+
+        {{ not loop.last ? '<hr>' }}
     {% endfor %}
 </div>

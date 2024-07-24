@@ -325,17 +325,6 @@
       "sC" : 0,
       "tS" : 0
     },
-    "\/src\/resources\/src\/js\/_settings.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 1,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/src\/resources\/dist\/js\/_settings.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
-    },
     "\/src\/resources\/src\/js\/_tabs.js" : {
       "bF" : 0,
       "ft" : 64,

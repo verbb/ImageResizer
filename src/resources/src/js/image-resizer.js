@@ -6,6 +6,5 @@
 // ==========================================================================
 
 // @codekit-prepend "_tabs.js"    
-// @codekit-prepend "_settings.js" 
 // @codekit-prepend "_resize-element-action.js"    
 

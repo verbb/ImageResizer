@@ -63,20 +63,30 @@ class Service extends Component
         /* @var Settings $settings */
         $settings = ImageResizer::$plugin->getSettings();
 
-        // If the plugin itself is disabled, return nothing.
-        if (!$settings->enabled) {
-            return null;
+        // Check if we're using the global settings (all volumes the same), they're priority
+        if ($settings->useGlobalSettings) {
+            return $settings->$setting;
         }
 
-        // Check if there's a specific setting for the source - so long as not empty, it takes precendence
+        // Check if there's a specific setting for the source
         $sourceSettings = $settings->assetSourceSettings[$sourceId] ?? [];
 
-        if (array_key_exists($setting, $sourceSettings) && $sourceSettings[$setting] !== '') {
-            return $sourceSettings[$setting];
+        if (array_key_exists($setting, $sourceSettings)) {
+            $fallback = null;
+
+            // Some settings should fallback to the all-asset setting when empty, because of how the UI works
+            if ($setting === 'imageWidth') {
+                $fallback = $settings->imageWidth;
+            } else if ($setting === 'imageHeight') {
+                $fallback = $settings->imageHeight;
+            } else if ($setting === 'imageQuality') {
+                $fallback = $settings->imageQuality;
+            }
+
+            return $sourceSettings[$setting] ?: $fallback;
         }
 
-        // Otherwise, fall back to the default, global setting for all sources.
-        return $settings->$setting;
+        return null;
     }
 
     /**
