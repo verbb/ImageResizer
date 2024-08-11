@@ -6,6 +6,17 @@
 - Now requires PHP `8.2.0+`.
 - Now requires Craft `5.0.0+`.
 
+## 3.0.12 - 2024-07-24
+
+### Added
+- Add “Manage Resize for All Volumes” plugin setting and re-organise Resize settings template to better differentiate between all-volume and volume-specific settings
+
+### Changed
+- Update English translations.
+
+### Fixed
+- Fix images not being resized when volume-specific settings weren’t set
+
 ## 3.0.11 - 2024-01-30
 
 ### Fixed

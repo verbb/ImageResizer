@@ -8,6 +8,7 @@ class Settings extends Model
     // Properties
     // =========================================================================
 
+    public bool $useGlobalSettings = true;
     public bool $enabled = true;
     public int $imageWidth = 2048;
     public int $imageHeight = 2048;
