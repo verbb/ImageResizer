@@ -2,7 +2,7 @@
     "name": "verbb/image-resizer",
     "description": "Resize assets when they are uploaded.",
     "type": "craft-plugin",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "keywords": [
         "craft",
         "cms",
