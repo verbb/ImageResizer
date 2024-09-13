@@ -98,7 +98,7 @@ Craft.ImageResizer.ResizeModal = Garnish.Modal.extend({
             '</div>' +
         '</div>';
 
-        $body = $(bodyHtml).appendTo(this.$container);
+        var $body = $(bodyHtml).appendTo(this.$container);
 
         this.base(this.$container, this.settings);
 
