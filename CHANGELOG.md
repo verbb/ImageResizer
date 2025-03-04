@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.0.3 - 2025-03-04
+
+### Added
+- Add `image-resizer/resize/bulk` console command.
+
 ## 4.0.2 - 2025-02-05
 
 ### Fixed
