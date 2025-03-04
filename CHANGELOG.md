@@ -22,6 +22,11 @@
 - Now requires PHP `8.2.0+`.
 - Now requires Craft `5.0.0+`.
 
+## 3.0.13 - 2025-03-04
+
+### Added
+- Add `image-resizer/resize/bulk` console command.
+
 ## 3.0.12 - 2024-07-24
 
 ### Added
